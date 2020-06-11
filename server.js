@@ -5,6 +5,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const users = require("./routes/api/users");
 const pumps = require("./routes/api/pumps")
+const files = require("./routes/api/files")
 const passport = require("passport");
 const bodyParser = require("body-parser");
 
@@ -22,7 +23,7 @@ const db = require("./config/keys").mongoURI;
 //Connect to MongoDB using Mongoose
 mongoose
   .connect(db, {
-    useNewUrlParser: true, 
+    useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
   })
@@ -35,9 +36,13 @@ app.use(passport.initialize());
 // Routes APIs
 app.use("/api/users", users);
 app.use("/api/pumps", pumps);
+app.use("/api/files", files);
 
 //Passport Config
 require("./config/passport")(passport);
+
+// Setting up static content directory
+app.use('/uploads', express.static(__dirname + '/public'));
 
 const PORT = process.env.PORT || 5000;
 

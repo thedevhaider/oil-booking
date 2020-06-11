@@ -15,7 +15,11 @@ const PumpSchema = new Schema({
     type: { type: String },
     coordinates: []
   },
-  fillings: [{type: String}]
+  fillings: [{type: String}],
+  date: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 PumpSchema.index({ location: "2dsphere" });
