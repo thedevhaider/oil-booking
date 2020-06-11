@@ -1,15 +1,17 @@
 # Oil Booking System
 
 # Routes
-GET  /api/users/healthcheck - For Checking the Users endpoints health
-POST /api/users/login - Login with the registered user and use the JWT token from response for other requests
-POST /api/users/register - Register the user
-GET  /api/pumps/healthcheck - For Checking the Pumps endpoints health
-GET  /api/pumps/ - For listing all registered pumps
-POST /api/pumps/ - For registering an Oil Pump
-GET  /api/pumps/nearest - For fetching your nearest Oil Pump
-POST /api/pumps/book - For booking fillings from the nearest pump
-GET  /api/pumps/bookings/:pump_id - For listing Bookings of a Pump
+1. GET  /api/users/healthcheck - For Checking the Users endpoints health
+2. POST /api/users/login - Login with the registered user and use the JWT token from response for other requests
+3. POST /api/users/register - Register the user
+4. GET  /api/pumps/healthcheck - For Checking the Pumps endpoints health
+5. GET  /api/pumps/ - For listing all registered pumps
+6. POST /api/pumps/ - For registering an Oil Pump
+7. GET  /api/pumps/nearest - For fetching your nearest Oil Pump
+8. POST /api/pumps/book - For booking fillings from the nearest pump
+9. GET  /api/pumps/bookings/:pump_id - For listing Bookings of a Pump
+
+# Setup Guide
 
 To setup the project please follow these guidelines
 
