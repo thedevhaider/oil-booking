@@ -8,8 +8,10 @@ const pumps = require("./routes/api/pumps")
 const files = require("./routes/api/files")
 const passport = require("passport");
 const bodyParser = require("body-parser");
-
+const cors = require('cors')
 const app = express();
+// Enabling Cors
+app.use(cors())
 
 //Adding middlerware to express app
 app.use(bodyParser.urlencoded({
